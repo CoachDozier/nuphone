@@ -34,6 +34,7 @@ app.post("/process-call", async (req, res) => {
 
         fs.writeFileSync("output.mp3", audio);
 
+        res.set("Content-Type", "application/xml");
         res.send(`<?xml version="1.0" encoding="UTF-8"?>
             <Response>
                 <Play>https://your-server-url/audio-response</Play>
