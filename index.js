@@ -39,7 +39,7 @@ app.post("/process-call", async (req, res) => {
                 <Play>https://your-server-url/audio-response</Play>
             </Response>`);
     } catch (error) {
-        console.error("Error:", error);
+        console.error("Error in /process-call:", error);
         res.status(500).send("Internal Server Error");
     }
 });
